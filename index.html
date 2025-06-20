@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
+    <title>Тугулым</title>
     <style>
         html {
             background-image: url(images/background.jpg);
@@ -49,24 +50,60 @@
             margin-top: 120px; /* Отступ сверху */
         }
 
+        .block {
+            display: none;
+        }
+
+        .blockShow {
+            display: block;
+            animation: showBlock 2s linear forwards;
+        }
+
+        @keyframes showBlock {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
     </style>
+
 </head>
 
 <body>
-    <div align="center" class="MyDiv">
-        <h1 class=MyHeader>Добро пожаловать <br> в систему управления автоматическими станциями очистки воды</h1>
-        <hr>
-    </div>
-    <div align="center">
-        <a href="https://owen1.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 1 </a>
-    </div>
-    <div align="center">
-        <a href="https://owen2.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 2 </a>    
-    </div>
-    <div align="center">
-        <a href="https://owen3.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 3 </a>    
-    </div>
-    <div align="center">
-        <a href="https://owen3.tugulym.keenetic.pro/" class=MyButton_L >Станция водоочистки Тугулым - Насосная </a>    
+
+    <div class="block"></div>
+
+        <div align="center" class="MyDiv">
+            <h1 class=MyHeader>Добро пожаловать <br> в систему управления автоматическими станциями очистки воды</h1>
+            <hr>
+        </div>
+
+        <div align="center">
+            <a href="https://owen1.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 1 </a>
+        </div>
+
+        <div align="center">
+            <a href="https://owen2.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 2 </a>    
+        </div>
+
+        <div align="center">
+            <a href="https://owen3.tugulym.keenetic.pro/" class=MyButton >Станция водоочистки Тугулым Линия 3 </a>    
+        </div>
+
+        <div align="center">
+            <a href="https://owen4.tugulym.keenetic.pro/" class=MyButton_L >Станция водоочистки Тугулым - Насосная </a>    
+        </div>
+
     </div>
 </body>
+
+<script>
+    var blockHidden = document.querySelector('.block');
+    function showBlock() {
+        blockHidden.classList.add('blockShow');
+    }
+    showBlock();
+</script>
